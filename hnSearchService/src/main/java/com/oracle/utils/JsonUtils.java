@@ -14,8 +14,8 @@ public class JsonUtils {
     /**
      * 将对象转换为json对象
      * <p>Title:pojoToJson</p>
-     * @param data
-     * @return
+     * @param data 传入pojo对象
+     * @return string 转换后的json
      */
     public static String objectToJson(Object data){
         try{
@@ -29,10 +29,10 @@ public class JsonUtils {
 
     /**
      * 将json数据转换为pojo对象list
-     * @param jsonData
-     * @param beanType
-     * @param <T>
-     * @return
+     * @param jsonData json数据
+     * @param beanType 需要转换成的类
+     * @param <T> 泛型
+     * @return t 需要转换类的类型
      */
     public static <T> T jsonToPojo(String jsonData,Class<T> beanType){
         try {

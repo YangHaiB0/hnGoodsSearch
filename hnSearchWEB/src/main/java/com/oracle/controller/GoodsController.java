@@ -28,8 +28,10 @@ public class GoodsController {
     /**
      * 控制器跳转业务方法
      *
-     * @param model 用来保存查到的商品数据
-     * @return String
+     * @param model 用于保存查询到的商品数据,页面信息
+     * @param page 页数
+     * @param pageSize 页面大小
+     * @return String 返回的页面
      */
     //@Transactional 还没加
     @RequestMapping("/search")

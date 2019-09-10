@@ -22,11 +22,11 @@ public interface JedisClient {
 
     Long hset(String key, String field, String value);
 
-    String hget(String key,String field);
+    String hget(String key, String field);
 
-    Long hdel(String key,String... field);
+    Long hdel(String key, String... field);
 
-    Boolean hexists(String key,String field);
+    Boolean hexists(String key, String field);
 
     List<String> hvals(String key);
 

@@ -20,11 +20,6 @@ import java.util.List;
 /**
  * 这是业务的实现
  */
-
-/**
- * 这里没有实现API工程的接口！！
- * 会出BUG
- */
 @Service("GoodsServiceImpl")
 public class GoodsServiceImpl implements GoodsService {
     //添加商品映射接口
@@ -39,7 +34,11 @@ public class GoodsServiceImpl implements GoodsService {
 
 
     /**
-     * 查询方法,在这里使用事务注解（不确定！
+     * 查询方法 测试使用
+     *
+     * @param page 页数
+     * @param pageSize 页面大小
+     * @return goodList 查询到的商品信息
      */
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
@@ -54,11 +53,13 @@ public class GoodsServiceImpl implements GoodsService {
         }
     }
 
-    @Override
-    public int countAll() {
-        return goodsMapper.countAll();
-    }
-
+    /**
+     * 查询商品信息
+     *
+     * @param page 页数
+     * @param pageSize 页面大小
+     * @return pageInfo
+     */
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
     public PageInfo<Goods> search(Integer page, Integer pageSize) {

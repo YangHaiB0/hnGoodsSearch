@@ -11,9 +11,7 @@ import java.util.List;
  */
 
 public interface GoodsService {
-    public List<Goods> searchAll(Integer page,Integer pageSize);
+    public List<Goods> searchAll(Integer page, Integer pageSize);
 
     public PageInfo<Goods> search(Integer page, Integer pageSize);
-
-    public int countAll();
 }
